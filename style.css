@@ -186,17 +186,30 @@ label {
 #controls {
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
+	position: relative;
+}
+#controls::before {
+	content: "";
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	background: #fff;
+	opacity: 0.1;
+	z-index: 1;
 }
 #controls label {
 	/*стиль отдельного переключателя*/
 	display: inline-block;
-	width: 15px;
-	height: 15px;
+	width: 2em;
+	height: 2em;
 	border-radius: 50%;
 	margin: 5% 2%;
 	background: #3faffa;
+	z-index: 5;
 }
 
 #active {
@@ -214,7 +227,7 @@ label {
 #switch2:checked:hover ~ #active label:nth-child(2),
 #switch3:checked:hover ~ #active label:nth-child(3),
 #switch4:checked:hover ~ #active label:nth-child(4) {
-	border: 0.3em solid #fff;
+	border: 0.5em solid #fff;
 }
 /*цвет активного лейбла при активации чекбокса*/
 #switch1:checked ~ #active label:nth-child(1),
@@ -222,5 +235,5 @@ label {
 #switch3:checked ~ #active label:nth-child(3),
 #switch4:checked ~ #active label:nth-child(4) {
 	background: inherit;
-	border: 0.3em solid #3faffa;
+	border: 0.5em solid #3faffa;
 }
