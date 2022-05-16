@@ -235,13 +235,18 @@ label {
     justify-content: center;
     text-align: center;
   }
-  #controls label {
-    width: 1.5em;
-    height: 1.5em;
-  }
+
   #active {
     right: 50%;
     bottom: 10%;
+    width: 100%;
     transform: translate(50%, 0%);
+  }
+  #controls {
+    height: 50%;
+  }
+  #controls label {
+    width: 1.5em;
+    height: 1.5em;
   }
 }
